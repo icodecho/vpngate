@@ -1,0 +1,22 @@
+#!/bin/bash
+nohup /usr/sbin/sshd -D &
+cd /opt
+chmod +x tinyproxy
+rm -rf /usr/sbin/tinyproxy /etc/tinyproxy/tinyproxy.conf
+mv tinyproxy /usr/sbin/tinyproxy 
+mv tinyproxy.conf /etc/tinyproxy/tinyproxy.conf
+mv restarttiny.sh /etc/tinyproxy/restarttiny.sh
+mv 400.html /etc/tinyproxy/400.html
+service tinyproxy start
+chmod +x /etc/tinyproxy/restarttiny.sh
+nohup /etc/tinyproxy/restarttiny.sh &
+tar xvf vpnserver.tar.gz
+rm -rf vpnserver.tar.gz
+cd /opt/vpnserver/
+echo "start runing VPNSERVER"
+chmod +x /opt/vpnserver/vpnserver 
+chmod +x /opt/vpnserver/hamcore.se2
+nohup /opt/vpnserver/vpnserver start &
+echo "runing Finish!"
+/bin/bash
+wait
