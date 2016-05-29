@@ -3,7 +3,7 @@ RUN yum install -y make gcc gcc-g++ which wget tar epel-release expect asciidoc 
 RUN yum update -y 
 RUN yum install -y tinyproxy
 RUN sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
-RUN echo "root:root" | chpasswd
+RUN echo "root:thismyvpn" | chpasswd
 RUN ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key  
 RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key
 RUN mkdir /var/run/sshd 
