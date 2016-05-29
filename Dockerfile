@@ -1,7 +1,7 @@
 FROM centos:6.6
 RUN yum install -y make gcc gcc-g++ which wget tar epel-release expect asciidoc curl openssh-server sudo
 RUN yum update -y 
-RUN yum install -y tinyproxy
+RUN yum install -y squid
 RUN sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
 RUN echo "root:thisismyvpn" | chpasswd
 RUN ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key  
