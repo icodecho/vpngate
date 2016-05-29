@@ -7,4 +7,4 @@ From [https://github.com/alechy/vpngate](https://github.com/alechy/vpngate)
 
 # Copyright
 
-Copyright: [alechy](https://github.com/alechy)
+Copyright ==>> [alechy](https://github.com/alechy)
