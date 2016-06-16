@@ -12,7 +12,7 @@ cd /opt
 #nohup /etc/tinyproxy/restarttiny.sh &
 rm -rf /etc/squid/squid.conf
 mv squid.conf /etc/squid/squid.conf
-#mv squid.passwd /etc/squid/squid.passwd
+mv squid_user.txt /etc/squid/squid_user.txt
 service squid start &
 tar xvf vpnserver.tar.gz
 rm -rf vpnserver.tar.gz
