@@ -15,7 +15,7 @@ cd /opt
 #mv squid.conf /etc/squid/squid.conf
 #mv squid_user.txt /etc/squid/squid_user.txt
 #################################
-service squid start &
+#service squid start &
 tar xvf vpnserver.tar.gz
 rm -rf vpnserver.tar.gz
 cd /opt/vpnserver/
