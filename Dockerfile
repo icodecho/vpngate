@@ -11,6 +11,7 @@ RUN mkdir /var/run/sshd
 ADD ./bin /usr/local/sbin
 ADD ./opt /opt
 RUN chmod +x /usr/local/sbin/run
-EXPOSE 22/tcp 443/tcp 80/tcp 1194/tcp
+EXPOSE 22/tcp 443/tcp 1194/tcp
+#EXPOSE 22/tcp 443/tcp 80/tcp 1194/tcp
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ENTRYPOINT ["/usr/local/sbin/run"]
